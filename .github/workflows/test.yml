@@ -26,3 +26,7 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         *mycmd
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2.0.2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
